@@ -6,19 +6,425 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		531D9C6313C3800C0012FA93 /* Cell.h in Headers */ = {isa = PBXBuildFile; fileRef = 531D9C6113C3800C0012FA93 /* Cell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		531D9C6413C3800C0012FA93 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 531D9C6213C3800C0012FA93 /* Cell.m */; };
+		533347DB13FB1D3D00A1E264 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533347DA13FB1D3D00A1E264 /* Accelerate.framework */; };
+		533347DD13FB1D4800A1E264 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533347DA13FB1D3D00A1E264 /* Accelerate.framework */; };
+		533347DE13FB1D5300A1E264 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533347DA13FB1D3D00A1E264 /* Accelerate.framework */; };
+		5399A54913D7533400245A75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5399A54813D7533400245A75 /* Foundation.framework */; };
+		5399A54C13D7533400245A75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5399A54B13D7533400245A75 /* main.m */; };
+		5399A55013D7533400245A75 /* Usage.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5399A54F13D7533400245A75 /* Usage.1 */; };
+		5399A55713D7564800245A75 /* AntSimulation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689113BE2EC00068DA86 /* AntSimulation.framework */; };
+		539A689513BE2EC00068DA86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689413BE2EC00068DA86 /* Cocoa.framework */; };
+		539A689F13BE2EC00068DA86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539A689D13BE2EC00068DA86 /* InfoPlist.strings */; };
+		539A68A813BE2EC00068DA86 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A68A713BE2EC00068DA86 /* SenTestingKit.framework */; };
+		539A68A913BE2EC00068DA86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689413BE2EC00068DA86 /* Cocoa.framework */; };
+		539A68AC13BE2EC00068DA86 /* AntSimulation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689113BE2EC00068DA86 /* AntSimulation.framework */; };
+		539A68B213BE2EC00068DA86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539A68B013BE2EC00068DA86 /* InfoPlist.strings */; };
+		539A68B413BE2EC00068DA86 /* AntSimulationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 539A68B313BE2EC00068DA86 /* AntSimulationTests.h */; };
+		539A68B613BE2EC00068DA86 /* AntSimulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A68B513BE2EC00068DA86 /* AntSimulationTests.m */; };
+		539A68BF13BE2FB60068DA86 /* Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = 539A68BD13BE2FB60068DA86 /* Environment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		539A68C013BE2FB60068DA86 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A68BE13BE2FB60068DA86 /* Environment.m */; };
+		539A68C313BE33E90068DA86 /* Ant.h in Headers */ = {isa = PBXBuildFile; fileRef = 539A68C113BE33E90068DA86 /* Ant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		539A68C413BE33E90068DA86 /* Ant.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A68C213BE33E90068DA86 /* Ant.m */; };
+		53C1DCC413D9EA7B00175066 /* gnuplot_i.c in Sources */ = {isa = PBXBuildFile; fileRef = 53C1DCC213D9EA7B00175066 /* gnuplot_i.c */; };
+		53C1DCC513D9EA7B00175066 /* gnuplot_i.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C1DCC313D9EA7B00175066 /* gnuplot_i.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53C1DCC813D9EAA000175066 /* libgnuplot_i.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C1DCBD13D9EA6200175066 /* libgnuplot_i.dylib */; };
+		53C1DCDC13DB828800175066 /* libant_analysis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C1DCD113D9F50B00175066 /* libant_analysis.dylib */; };
+		53C1DCDD13DB82D600175066 /* analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = 53C1DCD613DB7D4600175066 /* analysis.c */; };
+		53C1DCDE13DB82DA00175066 /* analysis.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C1DCD813DB7D7600175066 /* analysis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53EF67C013C3A1D0006859B0 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 53EF67BF13C3A1D0006859B0 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5399A55513D7533F00245A75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 539A689013BE2EC00068DA86;
+			remoteInfo = AntSimulation;
+		};
+		539A68AA13BE2EC00068DA86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 539A689013BE2EC00068DA86;
+			remoteInfo = AntSimulation;
+		};
+		53C1DCC613D9EA9D00175066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53C1DCBC13D9EA6200175066;
+			remoteInfo = gnuplot_i;
+		};
+		53C1DCDA13DB828400175066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53C1DCD013D9F50B00175066;
+			remoteInfo = ant_analysis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5399A54413D7533400245A75 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				5399A55013D7533400245A75 /* Usage.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		531D9C6113C3800C0012FA93 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		531D9C6213C3800C0012FA93 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		533347DA13FB1D3D00A1E264 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		5399A54613D7533400245A75 /* Usage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Usage; sourceTree = BUILT_PRODUCTS_DIR; };
+		5399A54813D7533400245A75 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5399A54B13D7533400245A75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5399A54E13D7533400245A75 /* Usage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Usage-Prefix.pch"; sourceTree = "<group>"; };
+		5399A54F13D7533400245A75 /* Usage.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Usage.1; sourceTree = "<group>"; };
+		539A689113BE2EC00068DA86 /* AntSimulation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AntSimulation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		539A689413BE2EC00068DA86 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		539A689713BE2EC00068DA86 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		539A689813BE2EC00068DA86 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		539A689913BE2EC00068DA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		539A689C13BE2EC00068DA86 /* AntSimulation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AntSimulation-Info.plist"; sourceTree = "<group>"; };
+		539A689E13BE2EC00068DA86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		539A68A013BE2EC00068DA86 /* AntSimulation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AntSimulation-Prefix.pch"; sourceTree = "<group>"; };
+		539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntSimulationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		539A68A713BE2EC00068DA86 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		539A68AF13BE2EC00068DA86 /* AntSimulationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AntSimulationTests-Info.plist"; sourceTree = "<group>"; };
+		539A68B113BE2EC00068DA86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		539A68B313BE2EC00068DA86 /* AntSimulationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntSimulationTests.h; sourceTree = "<group>"; };
+		539A68B513BE2EC00068DA86 /* AntSimulationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntSimulationTests.m; sourceTree = "<group>"; };
+		539A68BD13BE2FB60068DA86 /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		539A68BE13BE2FB60068DA86 /* Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
+		539A68C113BE33E90068DA86 /* Ant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ant.h; sourceTree = "<group>"; };
+		539A68C213BE33E90068DA86 /* Ant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ant.m; sourceTree = "<group>"; };
+		53C1DCBD13D9EA6200175066 /* libgnuplot_i.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libgnuplot_i.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C1DCC213D9EA7B00175066 /* gnuplot_i.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gnuplot_i.c; path = gnuplot_i/gnuplot_i.c; sourceTree = "<group>"; };
+		53C1DCC313D9EA7B00175066 /* gnuplot_i.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gnuplot_i.h; path = gnuplot_i/gnuplot_i.h; sourceTree = "<group>"; };
+		53C1DCD113D9F50B00175066 /* libant_analysis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libant_analysis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		53C1DCD613DB7D4600175066 /* analysis.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = analysis.c; path = analysis/analysis.c; sourceTree = "<group>"; };
+		53C1DCD813DB7D7600175066 /* analysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = analysis.h; path = analysis/analysis.h; sourceTree = "<group>"; };
+		53EF67BF13C3A1D0006859B0 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5399A54313D7533400245A75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				533347DD13FB1D4800A1E264 /* Accelerate.framework in Frameworks */,
+				5399A54913D7533400245A75 /* Foundation.framework in Frameworks */,
+				5399A55713D7564800245A75 /* AntSimulation.framework in Frameworks */,
+				53C1DCC813D9EAA000175066 /* libgnuplot_i.dylib in Frameworks */,
+				53C1DCDC13DB828800175066 /* libant_analysis.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		539A688D13BE2EC00068DA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				533347DB13FB1D3D00A1E264 /* Accelerate.framework in Frameworks */,
+				539A689513BE2EC00068DA86 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		539A68A213BE2EC00068DA86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A68A813BE2EC00068DA86 /* SenTestingKit.framework in Frameworks */,
+				539A68A913BE2EC00068DA86 /* Cocoa.framework in Frameworks */,
+				539A68AC13BE2EC00068DA86 /* AntSimulation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCBA13D9EA6200175066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCCE13D9F50B00175066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				533347DE13FB1D5300A1E264 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		5399A54A13D7533400245A75 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				5399A54B13D7533400245A75 /* main.m */,
+				5399A54F13D7533400245A75 /* Usage.1 */,
+				5399A54D13D7533400245A75 /* Supporting Files */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		5399A54D13D7533400245A75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5399A54E13D7533400245A75 /* Usage-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		539A688313BE2E890068DA86 = {
 			isa = PBXGroup;
 			children = (
+				539A689A13BE2EC00068DA86 /* AntSimulation */,
+				539A68AD13BE2EC00068DA86 /* AntSimulationTests */,
+				53C1DCC113D9EA6A00175066 /* gnuplot_i */,
+				53C1DCD513D9F50F00175066 /* ant_analysis */,
+				5399A54A13D7533400245A75 /* Usage */,
+				539A689313BE2EC00068DA86 /* Frameworks */,
+				539A689213BE2EC00068DA86 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		539A689213BE2EC00068DA86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				539A689113BE2EC00068DA86 /* AntSimulation.framework */,
+				539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */,
+				5399A54613D7533400245A75 /* Usage */,
+				53C1DCBD13D9EA6200175066 /* libgnuplot_i.dylib */,
+				53C1DCD113D9F50B00175066 /* libant_analysis.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		539A689313BE2EC00068DA86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533347DA13FB1D3D00A1E264 /* Accelerate.framework */,
+				539A689413BE2EC00068DA86 /* Cocoa.framework */,
+				539A68A713BE2EC00068DA86 /* SenTestingKit.framework */,
+				5399A54813D7533400245A75 /* Foundation.framework */,
+				539A689613BE2EC00068DA86 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		539A689613BE2EC00068DA86 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				539A689713BE2EC00068DA86 /* AppKit.framework */,
+				539A689813BE2EC00068DA86 /* CoreData.framework */,
+				539A689913BE2EC00068DA86 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		539A689A13BE2EC00068DA86 /* AntSimulation */ = {
+			isa = PBXGroup;
+			children = (
+				539A689B13BE2EC00068DA86 /* Supporting Files */,
+				53EF67BF13C3A1D0006859B0 /* Utilities.h */,
+				539A68C113BE33E90068DA86 /* Ant.h */,
+				539A68C213BE33E90068DA86 /* Ant.m */,
+				531D9C6113C3800C0012FA93 /* Cell.h */,
+				531D9C6213C3800C0012FA93 /* Cell.m */,
+				539A68BD13BE2FB60068DA86 /* Environment.h */,
+				539A68BE13BE2FB60068DA86 /* Environment.m */,
+			);
+			path = AntSimulation;
+			sourceTree = "<group>";
+		};
+		539A689B13BE2EC00068DA86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				539A689C13BE2EC00068DA86 /* AntSimulation-Info.plist */,
+				539A689D13BE2EC00068DA86 /* InfoPlist.strings */,
+				539A68A013BE2EC00068DA86 /* AntSimulation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		539A68AD13BE2EC00068DA86 /* AntSimulationTests */ = {
+			isa = PBXGroup;
+			children = (
+				539A68B313BE2EC00068DA86 /* AntSimulationTests.h */,
+				539A68B513BE2EC00068DA86 /* AntSimulationTests.m */,
+				539A68AE13BE2EC00068DA86 /* Supporting Files */,
+			);
+			path = AntSimulationTests;
+			sourceTree = "<group>";
+		};
+		539A68AE13BE2EC00068DA86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				539A68AF13BE2EC00068DA86 /* AntSimulationTests-Info.plist */,
+				539A68B013BE2EC00068DA86 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53C1DCC113D9EA6A00175066 /* gnuplot_i */ = {
+			isa = PBXGroup;
+			children = (
+				53C1DCC313D9EA7B00175066 /* gnuplot_i.h */,
+				53C1DCC213D9EA7B00175066 /* gnuplot_i.c */,
+			);
+			name = gnuplot_i;
+			sourceTree = "<group>";
+		};
+		53C1DCD513D9F50F00175066 /* ant_analysis */ = {
+			isa = PBXGroup;
+			children = (
+				53C1DCD813DB7D7600175066 /* analysis.h */,
+				53C1DCD613DB7D4600175066 /* analysis.c */,
+			);
+			name = ant_analysis;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		539A688E13BE2EC00068DA86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A68BF13BE2FB60068DA86 /* Environment.h in Headers */,
+				539A68C313BE33E90068DA86 /* Ant.h in Headers */,
+				531D9C6313C3800C0012FA93 /* Cell.h in Headers */,
+				53EF67C013C3A1D0006859B0 /* Utilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCBB13D9EA6200175066 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1DCC513D9EA7B00175066 /* gnuplot_i.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCCF13D9F50B00175066 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1DCDE13DB82DA00175066 /* analysis.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5399A54513D7533400245A75 /* Usage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5399A55313D7533400245A75 /* Build configuration list for PBXNativeTarget "Usage" */;
+			buildPhases = (
+				5399A54213D7533400245A75 /* Sources */,
+				5399A54313D7533400245A75 /* Frameworks */,
+				5399A54413D7533400245A75 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5399A55613D7533F00245A75 /* PBXTargetDependency */,
+				53C1DCC713D9EA9D00175066 /* PBXTargetDependency */,
+				53C1DCDB13DB828400175066 /* PBXTargetDependency */,
+			);
+			name = Usage;
+			productName = Usage;
+			productReference = 5399A54613D7533400245A75 /* Usage */;
+			productType = "com.apple.product-type.tool";
+		};
+		539A689013BE2EC00068DA86 /* AntSimulation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 539A68B713BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulation" */;
+			buildPhases = (
+				539A688C13BE2EC00068DA86 /* Sources */,
+				539A688D13BE2EC00068DA86 /* Frameworks */,
+				539A688E13BE2EC00068DA86 /* Headers */,
+				539A688F13BE2EC00068DA86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AntSimulation;
+			productName = AntSimulation;
+			productReference = 539A689113BE2EC00068DA86 /* AntSimulation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		539A68A513BE2EC00068DA86 /* AntSimulationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 539A68BA13BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulationTests" */;
+			buildPhases = (
+				539A68A113BE2EC00068DA86 /* Sources */,
+				539A68A213BE2EC00068DA86 /* Frameworks */,
+				539A68A313BE2EC00068DA86 /* Resources */,
+				539A68A413BE2EC00068DA86 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				539A68AB13BE2EC00068DA86 /* PBXTargetDependency */,
+			);
+			name = AntSimulationTests;
+			productName = AntSimulationTests;
+			productReference = 539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		53C1DCBC13D9EA6200175066 /* gnuplot_i */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C1DCBE13D9EA6200175066 /* Build configuration list for PBXNativeTarget "gnuplot_i" */;
+			buildPhases = (
+				53C1DCB913D9EA6200175066 /* Sources */,
+				53C1DCBA13D9EA6200175066 /* Frameworks */,
+				53C1DCBB13D9EA6200175066 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gnuplot_i;
+			productName = gnuplot_i;
+			productReference = 53C1DCBD13D9EA6200175066 /* libgnuplot_i.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		53C1DCD013D9F50B00175066 /* ant_analysis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53C1DCD213D9F50B00175066 /* Build configuration list for PBXNativeTarget "ant_analysis" */;
+			buildPhases = (
+				53C1DCCD13D9F50B00175066 /* Sources */,
+				53C1DCCE13D9F50B00175066 /* Frameworks */,
+				53C1DCCF13D9F50B00175066 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ant_analysis;
+			productName = ant_analysis;
+			productReference = 53C1DCD113D9F50B00175066 /* libant_analysis.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		539A688513BE2E890068DA86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Dylan Lukes";
 			};
 			buildConfigurationList = 539A688813BE2E890068DA86 /* Build configuration list for PBXProject "AntSimulation2" */;
@@ -29,34 +435,501 @@
 				en,
 			);
 			mainGroup = 539A688313BE2E890068DA86;
+			productRefGroup = 539A689213BE2EC00068DA86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				539A689013BE2EC00068DA86 /* AntSimulation */,
+				539A68A513BE2EC00068DA86 /* AntSimulationTests */,
+				53C1DCBC13D9EA6200175066 /* gnuplot_i */,
+				53C1DCD013D9F50B00175066 /* ant_analysis */,
+				5399A54513D7533400245A75 /* Usage */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		539A688F13BE2EC00068DA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A689F13BE2EC00068DA86 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		539A68A313BE2EC00068DA86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A68B213BE2EC00068DA86 /* InfoPlist.strings in Resources */,
+				539A68B413BE2EC00068DA86 /* AntSimulationTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		539A68A413BE2EC00068DA86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5399A54213D7533400245A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5399A54C13D7533400245A75 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		539A688C13BE2EC00068DA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A68C013BE2FB60068DA86 /* Environment.m in Sources */,
+				539A68C413BE33E90068DA86 /* Ant.m in Sources */,
+				531D9C6413C3800C0012FA93 /* Cell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		539A68A113BE2EC00068DA86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				539A68B613BE2EC00068DA86 /* AntSimulationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCB913D9EA6200175066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1DCC413D9EA7B00175066 /* gnuplot_i.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53C1DCCD13D9F50B00175066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C1DCDD13DB82D600175066 /* analysis.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5399A55613D7533F00245A75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 539A689013BE2EC00068DA86 /* AntSimulation */;
+			targetProxy = 5399A55513D7533F00245A75 /* PBXContainerItemProxy */;
+		};
+		539A68AB13BE2EC00068DA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 539A689013BE2EC00068DA86 /* AntSimulation */;
+			targetProxy = 539A68AA13BE2EC00068DA86 /* PBXContainerItemProxy */;
+		};
+		53C1DCC713D9EA9D00175066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53C1DCBC13D9EA6200175066 /* gnuplot_i */;
+			targetProxy = 53C1DCC613D9EA9D00175066 /* PBXContainerItemProxy */;
+		};
+		53C1DCDB13DB828400175066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53C1DCD013D9F50B00175066 /* ant_analysis */;
+			targetProxy = 53C1DCDA13DB828400175066 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		539A689D13BE2EC00068DA86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				539A689E13BE2EC00068DA86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		539A68B013BE2EC00068DA86 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				539A68B113BE2EC00068DA86 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5399A55113D7533400245A75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Usage/Usage-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5399A55213D7533400245A75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Usage/Usage-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		539A688A13BE2E890068DA86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SSE41_EXTENSIONS = YES;
+				GCC_ENABLE_SSE42_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_FAST_MATH = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_STRICT_ALIASING = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				LLVM_LTO = NO;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		539A688B13BE2E890068DA86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SSE41_EXTENSIONS = YES;
+				GCC_ENABLE_SSE42_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_FAST_MATH = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_STRICT_ALIASING = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				LLVM_LTO = NO;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		539A68B813BE2EC00068DA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AntSimulation/AntSimulation-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		539A68B913BE2EC00068DA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AntSimulation/AntSimulation-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		539A68BB13BE2EC00068DA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AntSimulationTests/AntSimulationTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		539A68BC13BE2EC00068DA86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "AntSimulationTests/AntSimulationTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		53C1DCBF13D9EA6200175066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		53C1DCC013D9EA6200175066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		53C1DCD313D9F50B00175066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		53C1DCD413D9F50B00175066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5399A55313D7533400245A75 /* Build configuration list for PBXNativeTarget "Usage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5399A55113D7533400245A75 /* Debug */,
+				5399A55213D7533400245A75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		539A688813BE2E890068DA86 /* Build configuration list for PBXProject "AntSimulation2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				539A688A13BE2E890068DA86 /* Debug */,
 				539A688B13BE2E890068DA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		539A68B713BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				539A68B813BE2EC00068DA86 /* Debug */,
+				539A68B913BE2EC00068DA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		539A68BA13BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				539A68BB13BE2EC00068DA86 /* Debug */,
+				539A68BC13BE2EC00068DA86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C1DCBE13D9EA6200175066 /* Build configuration list for PBXNativeTarget "gnuplot_i" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C1DCBF13D9EA6200175066 /* Debug */,
+				53C1DCC013D9EA6200175066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53C1DCD213D9F50B00175066 /* Build configuration list for PBXNativeTarget "ant_analysis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C1DCD313D9F50B00175066 /* Debug */,
+				53C1DCD413D9F50B00175066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
