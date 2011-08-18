@@ -14,11 +14,11 @@
 
 #import <objc/runtime.h>
 
-#define SIM_SIZE 100000
+#define SIM_SIZE 10000
 #define AC_LAG 24000
 #define AC_SIZE (AC_LAG * 2)
 #define REALIZATION_NUM 5
-#define SIGMA 300
+#define SIGMA 100
 
 typedef double (*double_imp_t)(id, SEL);
 typedef double (*void_imp_t)(id, SEL);
@@ -35,7 +35,7 @@ int main (int argc, const char * argv[])
                     
         double *res = calloc(SIM_SIZE, sizeof(double));
         
-        Environment *env = [[Environment alloc] initWithPathLength:50 pathCount:2 antCount:100];
+        Environment *env = [[[Environment alloc] initWithPathLength:50 pathCount:2 antCount:100] autorelease];
         env.isExplorationPheromone = YES;
         env.explorationPheromoneDecayRate = 0.005;
         env.explorationPheromoneIntensity = 0.25;
@@ -56,13 +56,12 @@ int main (int argc, const char * argv[])
         
         smooth(res, smoothed, SIM_SIZE, SIGMA);
         
-        
         /* --- Plotting --- */
         
         setenv("PATH", strcat(getenv("PATH"), ":/usr/local/bin"), 1);
         
         gnuplot_ctrl *g = gnuplot_init();
-        gnuplot_setstyle(g, "dots");
+        gnuplot_setstyle(g, "lines");
         
         gnuplot_cmd(g, "set title 'test'");
         gnuplot_set_xlabel(g, "t");
@@ -72,7 +71,7 @@ int main (int argc, const char * argv[])
         gnuplot_plot_x(g, smoothed, SIM_SIZE, "smoothed");
         
         // Wait for a keypress to die
-        getc(stdin);
+        //getc(stdin);
                 
         free(res);
         free(smoothed); 
@@ -80,6 +79,7 @@ int main (int argc, const char * argv[])
         gnuplot_close(g);
             
     }
+    
     return 0;
 }
 

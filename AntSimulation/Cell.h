@@ -18,8 +18,6 @@ typedef enum {
 
 @interface Cell : NSObject {
     NSUInteger _pathIndex, _cellIndex;
-    NSLock *_explorationPheromoneLock;
-    NSLock *_foragingPheromoneLock;
 }
 
 @property double explorationPheromone;

@@ -21,9 +21,6 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
-        _explorationPheromoneLock = [[NSLock alloc] init];
-        _foragingPheromoneLock = [[NSLock alloc] init];
     }
     
     return self;
@@ -31,16 +28,12 @@
 
 - (void)incrementExplorationPheromone:(double)amount
 {
-    [_explorationPheromoneLock lock];
     self.explorationPheromone += amount;
-    [_explorationPheromoneLock unlock];
 }
 
 - (void)incrementForagingPheromone:(double)amount
 {
-    [_foragingPheromoneLock lock];
     self.foragingPheromone += amount;
-    [_foragingPheromoneLock unlock];
 }
 
 - (BOOL)canMoveInbound { return YES; }

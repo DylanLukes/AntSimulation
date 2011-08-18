@@ -18,7 +18,7 @@
 
 @interface Environment : NSObject {
     // An array containing all of the cells in the environment, interleaved.
-    NSArray      *_cells;
+    NSMutableArray *_cells;
     NSMutableArray *_ants;
 }
 

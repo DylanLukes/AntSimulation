@@ -40,61 +40,68 @@ static dispatch_queue_t queue;
 
 - (id)initWithPathLength:(NSUInteger)pathLen pathCount:(NSUInteger)pathCount antCount:(NSUInteger)antCount
 {
-    self = [super init];
-    if (self) {
-        _time                = 0;
-        _pathLength          = pathLen;
-        _pathCount           = pathCount;
-        
-        // Default settings
-        _isExplorationPheromone = YES;
-        _isForagingPheromone    = YES;
-        
-        NSMutableArray *temp = [[NSMutableArray alloc] initWithCapacity:(_pathLength * _pathCount) + 1];
-        
-        // Insert colony node at index 0
-        [temp addObject:[[ColonyCell alloc] init]];
-        
-        // Insert each path
-        for (int path_i = 0; path_i < pathCount; path_i++) {
-            for (int cell_i = 0; cell_i < pathLen; cell_i++) {
-                Cell *cell;
-                
-                if (cell_i == (pathLen - 1)) {
-                    cell = [[FoodSourceCell alloc] init];
-                } else {
-                    cell = [[Cell alloc] init];
+    @autoreleasepool {
+        self = [super init];
+        if (self) {
+            _time                = 0;
+            _pathLength          = pathLen;
+            _pathCount           = pathCount;
+            
+            // Default settings
+            _isExplorationPheromone = YES;
+            _isForagingPheromone    = YES;
+            
+            _cells = [[NSMutableArray alloc] initWithCapacity:(_pathLength * _pathCount) + 1];
+            
+            // Insert colony node at index 0
+            [_cells addObject:[[[ColonyCell alloc] init] autorelease]];
+            
+            // Insert each path
+            for (int path_i = 0; path_i < pathCount; path_i++) {
+                for (int cell_i = 0; cell_i < pathLen; cell_i++) {
+                    Cell *cell;
+                    
+                    if (cell_i == (pathLen - 1)) {
+                        cell = [[[FoodSourceCell alloc] init] autorelease];
+                    } else {
+                        cell = [[[Cell alloc] init] autorelease];
+                    }
+                    
+                    cell.pathIndex = path_i;
+                    cell.cellIndex = cell_i;
+                    
+                    [_cells addObject:cell];
                 }
+            }
+            
+            for (Cell *cell in _cells) {
+                cell.env = self;
+            }
+            
+            if ([_cells count] > UINT32_MAX) {
+                [NSException raise:@"Invalid Environment" format:@"Environment cannot have more than %d cells.", UINT32_MAX];
+            }
+            
+            // Initialize all ants
+            _ants = [[NSMutableArray alloc] initWithCapacity:antCount];
+            
+            // Scatter ants
+            for (int i = 0; i < antCount; i++) {
+                NSInteger randIndex = arc4random_uniform((uint32_t)[_cells count]);
                 
-                cell.pathIndex = path_i;
-                cell.cellIndex = cell_i;
-                
-                [temp addObject:cell];
+                Ant *ant = [[Ant alloc] initInEnvironment:self atCell:[_cells objectAtIndex:randIndex]];
+                [_ants addObject:ant];
             }
         }
         
-        for (Cell *cell in temp) {
-            cell.env = self;
-        }
-        _cells = [temp copy];
-        
-        if ([_cells count] > UINT32_MAX) {
-            [NSException raise:@"Invalid Environment" format:@"Environment cannot have more than %d cells.", UINT32_MAX];
-        }
-        
-        // Initialize all ants
-        _ants = [[NSMutableArray alloc] initWithCapacity:antCount];
-        
-        // Scatter ants
-        for (int i = 0; i < antCount; i++) {
-            NSInteger randIndex = arc4random_uniform((uint32_t)[_cells count]);
-            
-            Ant *ant = [[Ant alloc] initInEnvironment:self atCell:[_cells objectAtIndex:randIndex]];
-            [_ants addObject:ant];
-        }
+        return self;
     }
-    
-    return self;
+}
+
+- (void)dealloc
+{
+    [_cells release];
+    [_ants release];
 }
 
 - (void)advance
