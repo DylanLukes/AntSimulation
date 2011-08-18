@@ -89,7 +89,7 @@ static dispatch_queue_t queue;
             for (int i = 0; i < antCount; i++) {
                 NSInteger randIndex = arc4random_uniform((uint32_t)[_cells count]);
                 
-                Ant *ant = [[Ant alloc] initInEnvironment:self atCell:[_cells objectAtIndex:randIndex]];
+                Ant *ant = [[[Ant alloc] initInEnvironment:self atCell:[_cells objectAtIndex:randIndex]] autorelease];
                 [_ants addObject:ant];
             }
         }
@@ -102,6 +102,7 @@ static dispatch_queue_t queue;
 {
     [_cells release];
     [_ants release];
+    [super dealloc];
 }
 
 - (void)advance
