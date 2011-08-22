@@ -14,11 +14,11 @@
 
 #import <objc/runtime.h>
 
-#define SIM_SIZE 200000
+#define SIM_SIZE 50000
 #define AC_LAG 24000
 #define AC_SIZE (AC_LAG * 2)
 #define REALIZATION_NUM 5
-#define SIGMA 100
+#define SIGMA 10
 
 typedef double (*double_imp_t)(id, SEL);
 typedef double (*void_imp_t)(id, SEL);
@@ -66,7 +66,7 @@ int main (int argc, const char * argv[])
         gnuplot_cmd(g, "set title 'test'");
         gnuplot_set_xlabel(g, "t");
         gnuplot_set_ylabel(g, "delta ph.");
-        
+                
         //gnuplot_plot_x(g, res, SIM_SIZE, "delta pheromone"); 
         //gnuplot_plot_x(g, smoothed, SIM_SIZE, "smoothed");
         

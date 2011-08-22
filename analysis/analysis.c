@@ -41,7 +41,7 @@ void autocorrelate(double *input, double *output, int size, int lag)
 
 void smooth(double *input, double *output, int input_length, int sigma)
 {
-    int gauss_length = 6 * sigma;
+    int gauss_length = 6 * sigma + 1;
     int output_length = input_length - gauss_length;
     double *gauss = calloc(0, gauss_length);
     double *norm_gauss = calloc(0, gauss_length);
@@ -55,10 +55,26 @@ void smooth(double *input, double *output, int input_length, int sigma)
     // Normalize gaussian
     double sum = 0;
     vDSP_sveD(gauss, 1, &sum, gauss_length);
+
     vDSP_vsdivD(gauss, 1, &sum, norm_gauss, 1, gauss_length);
+    
+    vDSP_sveD(norm_gauss, 1, &sum, gauss_length);
+    printf("%f\n", sum);
     
     // Convolute the padded input with the normalised gaussian
     vDSP_convD(input, 1, norm_gauss, 1, output + (gauss_length / 2), 1, output_length, gauss_length);
     
     free(gauss); free(norm_gauss);
+}
+
+void downsample(double *input, int input_length, double *output, int stride)
+{
+    for (int i = 0, j = 0; i < input_length; i += stride, j++) {
+        output[j] = input[i];
+    }
+}
+
+void crossings(double *input, double *output, int input_length, int *output_length, double threshold)
+{
+    
 }
