@@ -18,12 +18,6 @@
 		5399A55713D7564800245A75 /* AntSimulation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689113BE2EC00068DA86 /* AntSimulation.framework */; };
 		539A689513BE2EC00068DA86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689413BE2EC00068DA86 /* Cocoa.framework */; };
 		539A689F13BE2EC00068DA86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539A689D13BE2EC00068DA86 /* InfoPlist.strings */; };
-		539A68A813BE2EC00068DA86 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A68A713BE2EC00068DA86 /* SenTestingKit.framework */; };
-		539A68A913BE2EC00068DA86 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689413BE2EC00068DA86 /* Cocoa.framework */; };
-		539A68AC13BE2EC00068DA86 /* AntSimulation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539A689113BE2EC00068DA86 /* AntSimulation.framework */; };
-		539A68B213BE2EC00068DA86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 539A68B013BE2EC00068DA86 /* InfoPlist.strings */; };
-		539A68B413BE2EC00068DA86 /* AntSimulationTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 539A68B313BE2EC00068DA86 /* AntSimulationTests.h */; };
-		539A68B613BE2EC00068DA86 /* AntSimulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A68B513BE2EC00068DA86 /* AntSimulationTests.m */; };
 		539A68BF13BE2FB60068DA86 /* Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = 539A68BD13BE2FB60068DA86 /* Environment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		539A68C013BE2FB60068DA86 /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 539A68BE13BE2FB60068DA86 /* Environment.m */; };
 		539A68C313BE33E90068DA86 /* Ant.h in Headers */ = {isa = PBXBuildFile; fileRef = 539A68C113BE33E90068DA86 /* Ant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,13 +33,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		5399A55513D7533F00245A75 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 539A689013BE2EC00068DA86;
-			remoteInfo = AntSimulation;
-		};
-		539A68AA13BE2EC00068DA86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 539A688513BE2E890068DA86 /* Project object */;
 			proxyType = 1;
@@ -98,7 +85,6 @@
 		539A689C13BE2EC00068DA86 /* AntSimulation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AntSimulation-Info.plist"; sourceTree = "<group>"; };
 		539A689E13BE2EC00068DA86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		539A68A013BE2EC00068DA86 /* AntSimulation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AntSimulation-Prefix.pch"; sourceTree = "<group>"; };
-		539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntSimulationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539A68A713BE2EC00068DA86 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		539A68AF13BE2EC00068DA86 /* AntSimulationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AntSimulationTests-Info.plist"; sourceTree = "<group>"; };
 		539A68B113BE2EC00068DA86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -136,16 +122,6 @@
 			files = (
 				533347DB13FB1D3D00A1E264 /* Accelerate.framework in Frameworks */,
 				539A689513BE2EC00068DA86 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		539A68A213BE2EC00068DA86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				539A68A813BE2EC00068DA86 /* SenTestingKit.framework in Frameworks */,
-				539A68A913BE2EC00068DA86 /* Cocoa.framework in Frameworks */,
-				539A68AC13BE2EC00068DA86 /* AntSimulation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				539A689113BE2EC00068DA86 /* AntSimulation.framework */,
-				539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */,
 				5399A54613D7533400245A75 /* Usage */,
 				53C1DCBD13D9EA6200175066 /* libgnuplot_i.dylib */,
 				53C1DCD113D9F50B00175066 /* libant_analysis.dylib */,
@@ -365,25 +340,6 @@
 			productReference = 539A689113BE2EC00068DA86 /* AntSimulation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		539A68A513BE2EC00068DA86 /* AntSimulationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 539A68BA13BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulationTests" */;
-			buildPhases = (
-				539A68A113BE2EC00068DA86 /* Sources */,
-				539A68A213BE2EC00068DA86 /* Frameworks */,
-				539A68A313BE2EC00068DA86 /* Resources */,
-				539A68A413BE2EC00068DA86 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				539A68AB13BE2EC00068DA86 /* PBXTargetDependency */,
-			);
-			name = AntSimulationTests;
-			productName = AntSimulationTests;
-			productReference = 539A68A613BE2EC00068DA86 /* AntSimulationTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		53C1DCBC13D9EA6200175066 /* gnuplot_i */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53C1DCBE13D9EA6200175066 /* Build configuration list for PBXNativeTarget "gnuplot_i" */;
@@ -440,7 +396,6 @@
 			projectRoot = "";
 			targets = (
 				539A689013BE2EC00068DA86 /* AntSimulation */,
-				539A68A513BE2EC00068DA86 /* AntSimulationTests */,
 				53C1DCBC13D9EA6200175066 /* gnuplot_i */,
 				53C1DCD013D9F50B00175066 /* ant_analysis */,
 				5399A54513D7533400245A75 /* Usage */,
@@ -457,32 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		539A68A313BE2EC00068DA86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				539A68B213BE2EC00068DA86 /* InfoPlist.strings in Resources */,
-				539A68B413BE2EC00068DA86 /* AntSimulationTests.h in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		539A68A413BE2EC00068DA86 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5399A54213D7533400245A75 /* Sources */ = {
@@ -500,14 +430,6 @@
 				539A68C013BE2FB60068DA86 /* Environment.m in Sources */,
 				539A68C413BE33E90068DA86 /* Ant.m in Sources */,
 				531D9C6413C3800C0012FA93 /* Cell.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		539A68A113BE2EC00068DA86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				539A68B613BE2EC00068DA86 /* AntSimulationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,11 +456,6 @@
 			isa = PBXTargetDependency;
 			target = 539A689013BE2EC00068DA86 /* AntSimulation */;
 			targetProxy = 5399A55513D7533F00245A75 /* PBXContainerItemProxy */;
-		};
-		539A68AB13BE2EC00068DA86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 539A689013BE2EC00068DA86 /* AntSimulation */;
-			targetProxy = 539A68AA13BE2EC00068DA86 /* PBXContainerItemProxy */;
 		};
 		53C1DCC713D9EA9D00175066 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -724,65 +641,6 @@
 			};
 			name = Release;
 		};
-		539A68BB13BE2EC00068DA86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "AntSimulationTests/AntSimulationTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		539A68BC13BE2EC00068DA86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AntSimulation/AntSimulation-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "AntSimulationTests/AntSimulationTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		53C1DCBF13D9EA6200175066 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -903,15 +761,6 @@
 			buildConfigurations = (
 				539A68B813BE2EC00068DA86 /* Debug */,
 				539A68B913BE2EC00068DA86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		539A68BA13BE2EC00068DA86 /* Build configuration list for PBXNativeTarget "AntSimulationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				539A68BB13BE2EC00068DA86 /* Debug */,
-				539A68BC13BE2EC00068DA86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

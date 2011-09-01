@@ -107,24 +107,43 @@ static dispatch_queue_t queue;
 
 - (void)advance
 {
-    // Move all ants
-    static IMP antMoveIMP;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        antMoveIMP = class_getMethodImplementation([Ant class], @selector(move));
-    });
-    
-    // Decay all cells
-    for(Cell *cell in _cells) {
-        [cell decay];
-    }
-    
-    for(Ant *ant in _ants) {
-        antMoveIMP(ant, @selector(move));
-        //[ant move];
-    }
+    @autoreleasepool {
+
+        // Move all ants
+        static IMP antMoveIMP;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            antMoveIMP = class_getMethodImplementation([Ant class], @selector(move));
+        });
         
-    ++_time;
+        // Decay all cells
+        for(Cell *cell in _cells) {
+            [cell decay];
+        }
+        
+        for(Ant *ant in _ants) {
+            antMoveIMP(ant, @selector(move));
+            //[ant move];
+        }
+        
+        ++_time;
+        
+        static double begin = 0, end = 0, diff = 0;
+        
+        /*
+        static dispatch_once_t onceToken2;
+        dispatch_once(&onceToken2, ^{
+            begin = [[NSProcessInfo processInfo] systemUptime];
+        });
+        */
+        
+        if (_time % 100000 == 0) {
+            end = [[NSProcessInfo processInfo] systemUptime];
+            diff = end - begin;
+            NSLog(@"Rate: %lf t/s", (double)100000.0/(double)diff);
+            begin = end;
+        }
+    }
 }
 
 - (Cell *)colonyCell

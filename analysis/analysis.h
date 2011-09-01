@@ -12,6 +12,11 @@
 void autocorrelate(double *input, double *output, int size, int lag);
 void smooth(double *input, double *output, int length, int sigma);
 void downsample(double *input, int input_length, double *output, int stride);
-void crossings(double *input, double *output, int input_length, int *output_length, double threshold);
+void find_crossings(double *input, double *output, int input_length, int *output_length, double threshold);
+void rem_zeroes(double *input, double *output, int input_length, int *output_length);
+void s_autocorr(double *input, double *output, int input_length, int output_length, int width);
+
+double signD(double x);
+
 
 #endif

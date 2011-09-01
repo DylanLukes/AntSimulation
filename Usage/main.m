@@ -14,11 +14,16 @@
 
 #import <objc/runtime.h>
 
-#define SIM_SIZE 50000
-#define AC_LAG 24000
+#define SIM_SIZE (400000 * 2)
+#define AC_LAG (24000)
 #define AC_SIZE (AC_LAG * 2)
-#define REALIZATION_NUM 5
-#define SIGMA 10
+#define REALIZATION_NUM (5)
+
+// smoothing constants
+#define SIGMA (1000)
+
+// path state
+#define EPSILON (0.5)
 
 typedef double (*double_imp_t)(id, SEL);
 typedef double (*void_imp_t)(id, SEL);
@@ -26,6 +31,7 @@ typedef double (*void_imp_t)(id, SEL);
 int main (int argc, const char * argv[])
 {
     @autoreleasepool {
+        NSLog(@"Start");
         /* TODO:
          * - Run parallel many sim realizations:
          *  - smooth
@@ -35,7 +41,7 @@ int main (int argc, const char * argv[])
                     
         double *res = calloc(SIM_SIZE, sizeof(double));
         
-        Environment *env = [[[Environment alloc] initWithPathLength:50 pathCount:2 antCount:100] autorelease];
+        Environment *env = [[Environment alloc] initWithPathLength:50 pathCount:2 antCount:100];
         env.isExplorationPheromone = YES;
         env.explorationPheromoneDecayRate = 0.005;
         env.explorationPheromoneIntensity = 0.25;
@@ -44,8 +50,6 @@ int main (int argc, const char * argv[])
         env.foragingPheromoneIntensity    = 0.5;
         
         //[env markSampleAsVerbose:0];
-                
-        
         
         for (int i = 0; i < SIM_SIZE; i++) {
             res[i] = [env sampleDeltaTotalPheromoneAtPathHeads];
@@ -55,29 +59,47 @@ int main (int argc, const char * argv[])
         double *smoothed = calloc(SIM_SIZE, sizeof(double));
         
         smooth(res, smoothed, SIM_SIZE, SIGMA);
+
+        double *crossings = calloc(SIM_SIZE, sizeof(double));
+        int crossing_count = 0;
+        
+        find_crossings(smoothed, crossings, SIM_SIZE, &crossing_count, EPSILON);
+        crossings = realloc(crossings, sizeof(double) * crossing_count);
+        
+        double *crossings_nz = calloc(crossing_count, sizeof(double));
+        int nz_count = 0;
+        
+        rem_zeroes(crossings, crossings_nz, crossing_count, &nz_count);
+        crossings_nz = realloc(crossings_nz, sizeof(double) * nz_count);
         
         /* --- Plotting --- */
         
         setenv("PATH", strcat(getenv("PATH"), ":/usr/local/bin"), 1);
         
         gnuplot_ctrl *g = gnuplot_init();
-        gnuplot_setstyle(g, "lines");
+        gnuplot_setstyle(g, "steps");
         
-        gnuplot_cmd(g, "set title 'test'");
-        gnuplot_set_xlabel(g, "t");
-        gnuplot_set_ylabel(g, "delta ph.");
+        gnuplot_cmd(g, "set title 'Path State'");
+        gnuplot_set_xlabel(g, "-");
+        gnuplot_set_ylabel(g, "path state");
                 
-        //gnuplot_plot_x(g, res, SIM_SIZE, "delta pheromone"); 
-        //gnuplot_plot_x(g, smoothed, SIM_SIZE, "smoothed");
+        gnuplot_cmd(g, "set yrange [-1.1:1.1]");
+        
+        
+        NSLog(@"End: Plotting %d crossings.", nz_count);
+        //gnuplot_plot_x(g, crossings_nz, nz_count, "crossings");
         
         // Wait for a keypress to die
         //getc(stdin);
                 
+        free(smoothed);
+        free(crossings);
+        free(crossings_nz);
         free(res);
-        free(smoothed); 
         
         gnuplot_close(g);
-            
+        [env release];
+        
     }
     
     return 0;
