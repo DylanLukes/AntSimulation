@@ -14,7 +14,7 @@
 
 #import <objc/runtime.h>
 
-#define SIM_SIZE (400000 * 2)
+#define SIM_SIZE (50000 * 100)
 #define AC_LAG (24000)
 #define AC_SIZE (AC_LAG * 2)
 #define REALIZATION_NUM (5)
@@ -46,6 +46,7 @@ int main (int argc, const char * argv[])
         env.explorationPheromoneDecayRate = 0.005;
         env.explorationPheromoneIntensity = 0.25;
         
+        env.isForagingPheromone = YES;
         env.foragingPheromoneDecayRate    = 0.010;
         env.foragingPheromoneIntensity    = 0.5;
         
@@ -87,10 +88,10 @@ int main (int argc, const char * argv[])
         
         
         NSLog(@"End: Plotting %d crossings.", nz_count);
-        //gnuplot_plot_x(g, crossings_nz, nz_count, "crossings");
+        gnuplot_plot_x(g, res, SIM_SIZE, "crossings");
         
         // Wait for a keypress to die
-        //getc(stdin);
+        getc(stdin);
                 
         free(smoothed);
         free(crossings);
